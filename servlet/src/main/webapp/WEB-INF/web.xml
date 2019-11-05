@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>com.hs.slz.spring.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <!--<filter>-->
+    <!--<filter-name>HelloFilter</filter-name>-->
+    <!--<filter-class>HelloFilter</filter-class>-->
+  <!--</filter>-->
+  <!--<filter-mapping>-->
+    <!--<filter-name>HelloFilter</filter-name>-->
+    <!--<url-pattern>/hello</url-pattern>-->
+  <!--</filter-mapping>-->
+</web-app>
