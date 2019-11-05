@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ares>
+  <pub nodeName="jresplus-server" nodeNo="0"/>
+  <plugins>
+    <plugin service-id="jres.logFactory" load-level="1"></plugin>
+    <plugin service-id="jres.configurationHelper" load-level="1"></plugin>
+
+    <plugin service-id="jres.cepcore" load-level="3">
+      <plugin-configuration>
+        <args threadCount="3" queueSize="30" debug="false">
+          <monitor port="8013" key="123456" enable="true" />
+        </args>
+        <bizservices>
+          <bizservice id="jres.mproxy" debug="true" />
+          <bizservice id="jres.xmlServiceModule" debug="true" >
+            <item serviceId="*" functionId="*" threadCount="3" queueSize="30" />
+          </bizservice>
+        </bizservices>
+        <routetables>
+          <routetable serviceId="com.hundsun.jres.manage" functionId="8" pluginId="jres.mproxy" />
+          <routetable functionId="*" pluginId="jres.xmlServiceModule" />
+        </routetables>
+        <eventchains>
+          <chain>jres.mproxy;jres.cepcore</chain>
+          <chain>jres.localService;jres.cepcore</chain>
+          <chain>jres.t2channel;jres.cepcore</chain>
+          <chain>jres.xmlServiceModule;jres.cepcore</chain>
+        </eventchains>
+      </plugin-configuration>
+    </plugin>
+
+    <plugin service-id="jres.localService" load-level="3">
+      <plugin-configuration>
+        <args debug="false" />
+        <time timeout="10000" />
+      </plugin-configuration>
+    </plugin>
+
+    <plugin service-id="jres.t2channel" load-level="3">
+      <plugin-configuration>
+        <server port="9180" enable="true"/>
+      </plugin-configuration>
+    </plugin>
+
+    <plugin service-id="jres.xmlServiceModule" load-level="3"/>
+  </plugins>
+</ares>
