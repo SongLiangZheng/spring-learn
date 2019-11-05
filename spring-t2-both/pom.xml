@@ -10,7 +10,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>spring-t2</artifactId>
+  <artifactId>spring-t2-both</artifactId>
   <packaging>war</packaging>
 
   <name>spring-t2 Maven Webapp</name>

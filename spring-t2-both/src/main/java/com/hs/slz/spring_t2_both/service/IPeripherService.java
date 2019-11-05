@@ -1,6 +1,6 @@
-package com.hs.slz.spring_t2.service;
+package com.hs.slz.spring_t2_both.service;
 
-import com.hs.slz.spring_t2.User;
+import com.hs.slz.spring_t2_both.User;
 import com.hundsun.jresplus.remoting.impl.annotation.Service;
 import com.hundsun.jresplus.remoting.impl.annotation.ServiceModule;
 import com.hundsun.jresplus.remoting.impl.annotation.ServiceParam;

@@ -18,6 +18,7 @@
     <module>servlet-3</module>
     <module>spring</module>
     <module>spring-servlet3</module>
+    <module>spring-t2-both</module>
     <module>spring-t2</module>
   </modules>
 

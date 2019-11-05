@@ -1,4 +1,4 @@
-package com.hs.slz.spring_t2;
+package com.hs.slz.spring_t2_both;
 
 
 public class User {
