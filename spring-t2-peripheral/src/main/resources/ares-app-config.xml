@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ares>
-  <pub nodeName="jresplus-server" nodeNo="0"/>
+  <pub nodeName="peripheral" nodeNo="0"/>
   <plugins>
     <plugin service-id="jres.logFactory" load-level="1"></plugin>
     <plugin service-id="jres.configurationHelper" load-level="1"></plugin>
