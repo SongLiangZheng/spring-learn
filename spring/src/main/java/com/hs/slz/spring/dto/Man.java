@@ -12,19 +12,20 @@ import org.springframework.context.ApplicationContextAware;
 public class Man implements BeanNameAware, ApplicationContextAware, InitializingBean,
         DisposableBean {
     private String name;
+    private User user;
 
     public Man() {
         System.out.println("第一步：实例化类");
     }
 
     public void setName(String name) {
-        System.out.println("第二步：设置属性");
+        System.out.println("第二步：设置属性name");
         this.name = name;
     }
 
     @Override
     public void setBeanName(String s) {
-        System.out.println("第三步：设置bean的名称也就是spring容器中的名称，也就是id值" + name);
+        System.out.println("第三步：设置bean的名称也就是spring容器中的名称，也就是id值" + s);
     }
 
     @Override
@@ -57,22 +58,13 @@ public class Man implements BeanNameAware, ApplicationContextAware, Initializing
     }
 
 
-    public static class MyBeanPostProcess implements BeanPostProcessor {
+    public User getUser() {
+        return user;
+    }
 
-        //后处理bean，最重要的两步
-        @Override
-        public Object postProcessBeforeInitialization(Object bean, String s) throws BeansException {
-            if(bean instanceof Man)
-                System.out.println("第五步：初始化之前执行的方法");
-            return bean;
-        }
-
-        @Override
-        public Object postProcessAfterInitialization(Object bean, String s) throws BeansException {
-            if(bean instanceof Man)
-                System.out.println("第八步：执行初始化之后的方法");
-            return bean;
-        }
+    public void setUser(User user) {
+        System.out.println("第二步：注入属性user");
+        this.user = user;
     }
 }
 
