@@ -6,7 +6,7 @@
   <display-name>spring-slz</display-name>
 
   <listener>
-    <listener-class>com.hs.slz.spring.MyListener</listener-class>
+    <listener-class>com.hs.slz.spring.cmp.MyListener</listener-class>
   </listener>
 
   <context-param>
@@ -34,7 +34,7 @@
 
   <servlet>
     <servlet-name>helloServlet</servlet-name>
-    <servlet-class>com.hs.slz.spring.HelloServlet</servlet-class>
+    <servlet-class>com.hs.slz.spring.cmp.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>helloServlet</servlet-name>

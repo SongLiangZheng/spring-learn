@@ -3,7 +3,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>hello</servlet-name>
-    <servlet-class>com.hs.slz.spring.HelloServlet</servlet-class>
+    <servlet-class>com.hs.slz.spring.cmp.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>hello</servlet-name>

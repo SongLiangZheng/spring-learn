@@ -1,9 +1,11 @@
-package com.hs.slz.spring;
+package com.hs.slz.spring.cmp;
 
 import com.hs.slz.spring.dto.Man;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MyBeanPostProcess implements BeanPostProcessor {
 
     //后处理bean，最重要的两步

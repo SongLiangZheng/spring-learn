@@ -1,4 +1,4 @@
-package com.hs.slz.spring;
+package com.hs.slz.spring.cmp;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
