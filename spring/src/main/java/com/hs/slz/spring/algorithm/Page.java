@@ -1,4 +1,4 @@
-package com.hs.slz.spring;
+package com.hs.slz.spring.algorithm;
 
 import java.util.List;
 import java.util.Map;

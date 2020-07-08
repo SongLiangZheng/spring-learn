@@ -1,8 +1,14 @@
-package com.hs.slz.spring;
+package com.hs.slz.spring.algorithm;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
-public class Q1 {
+public class GreedySale {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 1, 2, 2, 1);
         deleteProducts(list, 3);
@@ -30,8 +36,9 @@ public class Q1 {
         for (Node node : nodes) {
             if(left>=node.getCount()){
                 left-=node.getCount();
-            }else
+            }else {
                 leftNodes.add(node);
+            }
         }
         System.out.println(leftNodes.size());
         return leftNodes.size();
@@ -59,12 +66,7 @@ public class Q1 {
 
         @Override
         public int compareTo(Node o) {
-            if (this.count > o.count)
-                return 1;
-            else if (this.count < o.count)
-                return -1;
-            else
-                return 0;
+            return Integer.compare(this.count, o.count);
         }
 
         @Override
