@@ -1,4 +1,4 @@
-package com.hs.slz.spring.algorithm;
+package com.hs.slz.spring.algorithm.common;
 
 import java.util.HashSet;
 import java.util.Set;

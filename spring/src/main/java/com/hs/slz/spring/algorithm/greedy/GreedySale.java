@@ -1,4 +1,4 @@
-package com.hs.slz.spring.algorithm;
+package com.hs.slz.spring.algorithm.greedy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

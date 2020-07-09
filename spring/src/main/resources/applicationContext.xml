@@ -10,15 +10,15 @@
   </context:component-scan>
   <aop:aspectj-autoproxy proxy-target-class="true"/>
 
+  <bean id="man" class="com.hs.slz.spring.dto.Man" init-method="setup" destroy-method="destory">
+    <property name="name" value="张三"/>
+    <property name="user" ref="user"/>
+  </bean>
+
   <bean id="user" class="com.hs.slz.spring.dto.User">
     <constructor-arg name="name" value="zhangsan"/>
     <constructor-arg name="age" value="13"/>
-
   </bean>
 
-  <bean id="man" class="com.hs.slz.spring.dto.Man" init-method="setup" destroy-method="destory">
-  <property name="name" value="张三"/>
-  <property name="user" ref="user"/>
-  </bean>
 
 </beans>
