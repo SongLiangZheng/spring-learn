@@ -76,9 +76,6 @@ public class DigGold_01package {
     }
 
     public static int recursion(int n, int w) {
-        if (n < 1) {
-            throw new RuntimeException("n cannot be less than 1");
-        }
         if (n == 1) {
             if (w < P[n]) {
                 return 0;

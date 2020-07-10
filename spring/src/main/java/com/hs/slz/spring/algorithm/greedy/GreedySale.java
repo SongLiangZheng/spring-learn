@@ -18,6 +18,8 @@ public class GreedySale {
         // Write your code here
         List<Integer> uniIds = new ArrayList<>(new HashSet<>(ids));
         Map<Integer, Node> map = new HashMap<>();
+
+
         for (int i = 0; i < ids.size(); i++) {
             Integer id = ids.get(i);
             if (!map.containsKey(id)) {
